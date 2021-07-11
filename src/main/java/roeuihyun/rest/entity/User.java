@@ -22,16 +22,19 @@ public class User {
     }
 
     public User(String name, String email){
+        //
         this();
         this.name = name;
         this.email = email;
     }
 
     public static User sample(){
+        //
         return new User("roeuihyun", "roeuihyun@gmail.com");
     }
 
     public static void main(String[] args) {
+        //
         User user = new User("kim","kim@naver.com;");
         System.out.println(new Gson().toJson(user));
     }
