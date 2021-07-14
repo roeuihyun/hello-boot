@@ -1,6 +1,6 @@
 package roeuihyun.rest.store.logic;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 import roeuihyun.rest.entity.User;
 import roeuihyun.rest.store.UserStore;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-@Repository
+@Component
 public class UserStoreLogic implements UserStore {
 
     //

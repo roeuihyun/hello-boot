@@ -10,4 +10,5 @@ public class UserRestApp {
         //
         SpringApplication.run(UserRestApp.class, args);
     }
+
 }

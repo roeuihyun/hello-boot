@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import roeuihyun.rest.entity.User;
 import roeuihyun.rest.service.UserService;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class UserController {
@@ -16,11 +18,16 @@ public class UserController {
         //
         return userService.register(newUser);
     }
-//    @GetMapping("/users/{id}")
-//    public User userId(@RequestParam String id){
-//        //
-//        return userService.find(id);
-//    }
 
+    @GetMapping("/users/{id}")
+    public User find(@PathVariable String id){
+        //
+        return userService.find(id);
+    }
+
+    @GetMapping("/users")
+    public List<User> findAll(){
+        return userService.findAll();
+    }
 
 }
